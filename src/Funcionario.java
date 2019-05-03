@@ -1,10 +1,16 @@
-public class Funcionario {
+public abstract class Funcionario {
 
     private String Nome;
     private float salario;
 
-    public void baterPonto(){
-        System.out.println("funcionário bateu ponto");
+    public abstract void baterPonto();
+
+    public boolean baterMeta(){
+        return true;
+    }
+
+    public boolean baterMeta(int pontos){
+        return pontos >= 10;
     }
 
     public String getNome() {

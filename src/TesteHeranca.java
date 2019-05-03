@@ -2,7 +2,7 @@ public class TesteHeranca {
 
     public static void main(String[] args) {
 
-        Funcionario funcionario = new Funcionario();
+        Funcionario funcionario = new Professor();
         funcionario.setNome("Elaine");
         funcionario.setSalario(50000F);
         System.out.println(" Funcionário(a) " + funcionario.getNome() + " ganha R$ " + funcionario.getSalario());
@@ -17,8 +17,18 @@ public class TesteHeranca {
         funcionario.baterPonto();
         professor.baterPonto();
 
+        professor.baterMeta();
+        professor.baterMeta(5);
+
+        if (professor.baterMeta(15)){
+            System.out.println("Meta batida");
+        } else{
+            System.out.println("Meta não atingida");
+            }
+        }
+
+
 
     }
 
-
-}
+    
